@@ -1,4 +1,4 @@
-# First Markdown for SOINC - Config Change 
+# First Markdown for SONiC - Config Change 
 
 ## SONiC Versions and Supported Features 
 
