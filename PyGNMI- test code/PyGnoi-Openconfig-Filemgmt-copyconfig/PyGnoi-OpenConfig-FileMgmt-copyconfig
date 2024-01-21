@@ -1,0 +1,130 @@
+from pygnmi.client import gNMIclient
+from google.protobuf.json_format import MessageToJson
+from google.protobuf.json_format import Parse
+
+def create_copy_request(source_path, destination_path):
+    # Create a gNMI SetRequest for the Copy RPC
+    set_request = {
+        "delete": [
+            {
+                "path": {
+                    "element": [
+                        {"name": "copy-config"},
+                        {"name": "source"},
+                        {"name": "config"},
+                        {"name": "source-path"},
+                        {"name": "path"},
+                    ],
+                },
+                "value": source_path,
+            }
+        ],
+        "replace": [
+            {
+                "path": {
+                    "element": [
+                        {"name": "copy-config"},
+                        {"name": "destination"},
+                        {"name": "config"},
+                        {"name": "destination-path"},
+                        {"name": "path"},
+                    ],
+                },
+                "value": destination_path,
+            }
+        ],
+    }
+
+    return set_request
+
+def main():
+    # Define gNMI parameters
+    target = ("localhost", 57400)  # Replace with your gNMI server details
+    username = "your_username"
+    password = "your_password"
+
+    # Specify the source and destination paths
+    source_path = "/path/to/source/file.txt"
+    destination_path = "/path/to/destination/file.txt"
+
+    # Create a gNMI SetRequest for the Copy RPC
+    copy_request = create_copy_request(source_path, destination_path)
+
+    # Convert the SetRequest to JSON format
+    json_input = MessageToJson(Parse(copy_request))
+
+    # Establish a gNMI client connection
+    with gNMIclient(target, username=username, password=password, insecure=True) as gc:
+        # Send the SetRequest to the gNMI server
+        response = gc.set(json_input)
+
+        # Print the response
+        print(response)
+
+if __name__ == "__main__":
+    main()
+from pygnmi.client import gNMIclient
+from google.protobuf.json_format import MessageToJson
+from google.protobuf.json_format import Parse
+
+def create_copy_request(source_path, destination_path):
+    # Create a gNMI SetRequest for the Copy RPC
+    set_request = {
+        "delete": [
+            {
+                "path": {
+                    "element": [
+                        {"name": "copy-config"},
+                        {"name": "source"},
+                        {"name": "config"},
+                        {"name": "source-path"},
+                        {"name": "path"},
+                    ],
+                },
+                "value": source_path,
+            }
+        ],
+        "replace": [
+            {
+                "path": {
+                    "element": [
+                        {"name": "copy-config"},
+                        {"name": "destination"},
+                        {"name": "config"},
+                        {"name": "destination-path"},
+                        {"name": "path"},
+                    ],
+                },
+                "value": destination_path,
+            }
+        ],
+    }
+
+    return set_request
+
+def main():
+    # Define gNMI parameters
+    target = ("localhost", 57400)  # Replace with your gNMI server details
+    username = "your_username"
+    password = "your_password"
+
+    # Specify the source and destination paths
+    source_path = "/path/to/source/file.txt"
+    destination_path = "/path/to/destination/file.txt"
+
+    # Create a gNMI SetRequest for the Copy RPC
+    copy_request = create_copy_request(source_path, destination_path)
+
+    # Convert the SetRequest to JSON format
+    json_input = MessageToJson(Parse(copy_request))
+
+    # Establish a gNMI client connection
+    with gNMIclient(target, username=username, password=password, insecure=True) as gc:
+        # Send the SetRequest to the gNMI server
+        response = gc.set(json_input)
+
+        # Print the response
+        print(response)
+
+if __name__ == "__main__":
+    main()

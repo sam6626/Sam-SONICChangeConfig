@@ -1,0 +1,2 @@
+pip install gnmi grpcio protobuf pygnmi
+pip install grpcio grpcio-tools protobuf
