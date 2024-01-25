@@ -2,7 +2,8 @@ Using PyGNMI to automate configuration change leveraging ConfigReplace
 
 - Read this section if you want to explore using pyGNMI with copyconfig
 - This is work in progress. No workable solution has been completed nor tested.
-- Below are some references to different blogs which were used to write some of the code in              Pygnmi-testcode folder.
+- Below are some references to different blogs which were used to write some of the code in Pygnmi-testcode folder.
+- [py-gnmi](https://github.com/akarneliuk/pygnmi) abstracts the gprc/proto/openconfig and presents simple gnmi requests in python library and returns the responses into python dictory for easy handling /mauipulation within code. The link earlier take you to the github repo and [this one here](https://pypi.org/project/pygnmi/0.8.8/) takes you to the pypi page.
 - #### Some blogs and documents for pygnmi
 
 https://karneliuk.com/tag/pygnmi/
