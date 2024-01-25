@@ -1,6 +1,6 @@
-# SONiC - Config Change Supported Features
+# SONiC - Config Change Supported CLI Features
 
-## SONiC Versions and Supported Features 
+## SONiC Versions and Supported CLI Features 
 
 - We need SONiC 4.1 or higher
 
