@@ -30,3 +30,4 @@
 
   gnoi_client -module Sonic -rpc clearNeighbors -jsonin '{"sonic-neighbor:input": {"force": true, "ip": "4.4.4.1"}}' -insecure
 
+- gNOIc by [Karimra]() does not support copy configs .. yet it does come with a handy [pypi](https://pypi.org/project/gnoi-client/) ! 
