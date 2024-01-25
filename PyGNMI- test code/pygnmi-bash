@@ -1,2 +1,31 @@
 pip install gnmi grpcio protobuf pygnmi
 pip install grpcio grpcio-tools protobuf
+
+
+
+
+import grpc
+from pygnmi.client import gNMIclient
+from gnmi import gNMI_pb2, gNMI_pb2_grpc
+from pygnmi.client import gNMIStub
+from pygnmi.proto import gnmi_pb2
+import grpc
+from pygnmi.client import gNMIclient
+from gnmi import gNMI_pb2, gNMI_pb2_grpc
+
+import grpc
+from gnmi import gNMI_pb2
+from gnmi import gNMI_pb2_grpc
+from google.protobuf import empty_pb2
+
+import grpc
+from gnmi import gNMI_pb2
+from gnmi import gNMI_pb2_grpc
+from google.protobuf import empty_pb2
+
+import grpc
+from your_generated_proto_file import gnoi_service_pb2, gnoi_service_pb2_grpc
+import grpc
+from gnmi import gNMI_pb2
+from gnmi import gNMI_pb2_grpc
+from google.protobuf import empty_pb2
